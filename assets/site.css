@@ -330,6 +330,13 @@ section {
   background: var(--ink);
   color: var(--bg);
 }
+/* Four languages have to stay inside a 360px header */
+@media (max-width: 620px) {
+  .lang a {
+    padding: 0.3rem 0.28rem;
+    letter-spacing: 0;
+  }
+}
 
 .icon-btn {
   display: grid;
