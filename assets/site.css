@@ -269,6 +269,12 @@ section {
     height: 2.09rem;
   }
 }
+@media (max-width: 480px) {
+  .brand__logo {
+    width: 7rem;
+    height: 1.567rem;
+  }
+}
 .brand__name {
   font-family: var(--font-display);
   font-size: 1.0625rem;
@@ -335,6 +341,17 @@ section {
   .lang a {
     padding: 0.3rem 0.28rem;
     letter-spacing: 0;
+  }
+}
+@media (max-width: 480px) {
+  .header__inner {
+    gap: var(--space-3);
+  }
+  .header__tools {
+    gap: 0.375rem;
+  }
+  .lang a {
+    padding: 0.3rem 0.25rem;
   }
 }
 
