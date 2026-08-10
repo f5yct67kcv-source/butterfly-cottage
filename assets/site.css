@@ -871,6 +871,23 @@ section {
   font-size: var(--text-sm);
   color: var(--ink-soft);
 }
+/* Links in this table inherited body colour and had no underline, so they did
+   not read as links at all. */
+.know__row a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.know__row a:hover {
+  text-decoration-thickness: 2px;
+}
+/* The terms link must be unmistakably clickable */
+.know__row a.link-strong {
+  font-size: var(--text-base);
+  font-weight: 600;
+  text-decoration-thickness: 2px;
+}
 @media (max-width: 480px) {
   .know__row {
     grid-template-columns: 1fr;
