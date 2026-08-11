@@ -311,6 +311,22 @@ section {
   color: var(--ink);
   border-bottom-color: var(--accent);
 }
+/* The map is the only nav entry that leaves the page, so it says so. */
+.nav__map {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32em;
+  color: var(--ink);
+}
+.nav__map svg {
+  width: 0.7em;
+  height: 0.7em;
+  flex: none;
+  opacity: 0.7;
+}
+.nav__map:hover svg {
+  opacity: 1;
+}
 .header__tools {
   display: flex;
   align-items: center;
