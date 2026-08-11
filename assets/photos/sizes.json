@@ -95,6 +95,22 @@
   1200,
   313
  ],
+ "hero-sunset-square": [
+  1200,
+  1200
+ ],
+ "hero-sunset-square-sm": [
+  800,
+  800
+ ],
+ "hero-sunset-wide": [
+  1920,
+  800
+ ],
+ "hero-sunset-wide-sm": [
+  1200,
+  500
+ ],
  "hero-winter": [
   1920,
   500

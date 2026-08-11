@@ -55,6 +55,40 @@ for name, (src, big, small) in JOBS.items():
             total += target.stat().st_size
     print(f"{name:12s} {base.size[0]}x{base.size[1]} -> ok")
 
+# ---------------------------------------------------------------------------
+# Art-directed hero.
+#
+# A single wide photo cannot serve both the desktop band and a phone: cropping
+# a 2.4:1 source into a portrait-ish box throws away most of the width. So the
+# hero is cut twice from the same 4:3 original, once wide and once square, and
+# the HTML picks per screen. Boxes are (left, top, right, bottom) on the
+# orientation-corrected original.
+HERO_SRC = "hero-sunset.jpg"
+HERO_CROPS = {
+    # sky, roofline and the Butterfly sign; keeps the lamp post, drops the car,
+    # the road sign and most of the neighbouring block
+    "hero-sunset-wide": ((0, 620, 2950, 1849), 1920, 1200),
+    # the whole cottage, for phones
+    "hero-sunset-square": ((800, 500, 3100, 2800), 1200, 800),
+}
+
+hero_path = SRC / HERO_SRC
+if hero_path.exists():
+    hero = ImageOps.exif_transpose(Image.open(hero_path)).convert("RGB")
+    for name, (box, big, small) in HERO_CROPS.items():
+        cut = hero.crop(box)
+        for suffix, width in (("", big), ("-sm", small)):
+            im = cut.resize((width, round(width * cut.size[1] / cut.size[0])), Image.LANCZOS)
+            sizes[f"{name}{suffix}"] = im.size
+            for ext, kwargs in (("webp", dict(quality=WEBP_QUALITY, method=6)),
+                                ("jpg", dict(quality=82, optimize=True, progressive=True))):
+                target = OUT / f"{name}{suffix}.{ext}"
+                im.save(target, **kwargs)
+                total += target.stat().st_size
+        print(f"{name:20s} {cut.size[0]}x{cut.size[1]} -> ok")
+else:
+    print("fehlt:", HERO_SRC)
+
 # The originals are smaller than the target long sides above, so the real output
 # dimensions differ from what the JOBS table suggests. Write them out for the
 # HTML patcher instead of hard-coding guesses.

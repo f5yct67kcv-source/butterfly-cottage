@@ -513,13 +513,18 @@ section {
   isolation: isolate;
   margin-top: clamp(2.5rem, 5vw, 4rem);
 }
+/* Two crops are cut from the same photo in build_images.py, so the box only has
+   to match the crop it gets. No object-position nudging needed. */
 .hero__band img {
   display: block;
   width: 100%;
-  aspect-ratio: 1920 / 500;
-  min-height: 15rem;
+  aspect-ratio: 2.4 / 1;
   object-fit: cover;
-  object-position: 50% 58%;
+}
+@media (max-width: 700px) {
+  .hero__band img {
+    aspect-ratio: 1 / 1;
+  }
 }
 .hero__band::after {
   content: '';
@@ -543,10 +548,6 @@ section {
   text-shadow: 0 1px 10px rgb(0 0 0 / 0.55);
 }
 @media (max-width: 640px) {
-  .hero__band img {
-    aspect-ratio: 16 / 11;
-    object-position: 50% 62%;
-  }
   .hero__season {
     font-size: 0.625rem;
     letter-spacing: 0.1em;

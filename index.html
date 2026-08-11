@@ -15,7 +15,7 @@
       property="og:description"
       content="A quiet self-catering cottage for two in the heart of the Cairngorms National Park."
     />
-    <meta property="og:image" content="https://www.butterfly-cottage.co.uk/assets/photos/hero-autumn.jpg" />
+    <meta property="og:image" content="https://www.butterfly-cottage.co.uk/assets/photos/hero-sunset-wide.jpg" />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:locale:alternate" content="de_DE" />
     <meta property="og:locale:alternate" content="nl_NL" />
@@ -40,7 +40,16 @@
     <link
       rel="preload"
       as="image"
-      imagesrcset="assets/photos/hero-autumn-sm.webp 1200w, assets/photos/hero-autumn.webp 1920w"
+      media="(max-width: 700px)"
+      imagesrcset="assets/photos/hero-sunset-square-sm.webp 800w, assets/photos/hero-sunset-square.webp 1200w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      media="(min-width: 701px)"
+      imagesrcset="assets/photos/hero-sunset-wide-sm.webp 1200w, assets/photos/hero-sunset-wide.webp 1920w"
       imagesizes="100vw"
       fetchpriority="high"
     />
@@ -52,7 +61,7 @@
         "name": "Butterfly Cottage",
         "description": "Self-catering cottage for two in Grantown-on-Spey, Cairngorms National Park.",
         "url": "https://www.butterfly-cottage.co.uk/en/",
-        "image": "https://www.butterfly-cottage.co.uk/assets/photos/hero-autumn.jpg",
+        "image": "https://www.butterfly-cottage.co.uk/assets/photos/hero-sunset-wide.jpg",
         "telephone": "+441479873235",
         "email": "relax@butterfly-cottage.co.uk",
         "numberOfBedrooms": 1,
@@ -146,15 +155,26 @@
         <div class="hero__band">
           <picture>
             <source
+              media="(max-width: 700px)"
               type="image/webp"
-              srcset="assets/photos/hero-autumn-sm.webp 1200w, assets/photos/hero-autumn.webp 1920w"
+              srcset="assets/photos/hero-sunset-square-sm.webp 800w, assets/photos/hero-sunset-square.webp 1200w"
+              sizes="100vw"
+            />
+            <source
+              media="(max-width: 700px)"
+              srcset="assets/photos/hero-sunset-square-sm.jpg 800w, assets/photos/hero-sunset-square.jpg 1200w"
+              sizes="100vw"
+            />
+            <source
+              type="image/webp"
+              srcset="assets/photos/hero-sunset-wide-sm.webp 1200w, assets/photos/hero-sunset-wide.webp 1920w"
               sizes="100vw"
             />
             <img
-              src="assets/photos/hero-autumn.jpg"
-              alt="Butterfly Cottage in autumn: white harled walls, larch cladding and a slate roof, with golden trees behind"
+              src="assets/photos/hero-sunset-wide.jpg"
+              alt="Butterfly Cottage at sunset, the larch-clad gable with its Butterfly Cottage sign under a sky streaked orange"
               width="1920"
-              height="500"
+              height="800"
               fetchpriority="high"
             />
           </picture>
