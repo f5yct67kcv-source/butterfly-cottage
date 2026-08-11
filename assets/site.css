@@ -257,8 +257,8 @@ section {
 /* Official Butterfly Cottage wordmark, drawn as a mask so it inherits colour */
 .brand__logo {
   display: block;
-  width: 11.55rem;
-  height: 2.585rem;
+  width: 13.5rem;
+  height: 3.021rem;
   flex: none;
   background-color: var(--logo);
   -webkit-mask: url('logo.svg') no-repeat left center / contain;
@@ -270,14 +270,14 @@ section {
 }
 @media (max-width: 560px) {
   .brand__logo {
-    width: 9.35rem;
-    height: 2.09rem;
+    width: 10.6rem;
+    height: 2.372rem;
   }
 }
 @media (max-width: 480px) {
   .brand__logo {
-    width: 7rem;
-    height: 1.567rem;
+    width: 8.2rem;
+    height: 1.835rem;
   }
 }
 .brand__name {
