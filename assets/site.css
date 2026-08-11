@@ -490,7 +490,9 @@ section {
 .hero__aside {
   display: grid;
   align-content: end;
-  gap: var(--space-7);
+  /* --space-7 does not exist in the scale above, so this used to resolve to
+     "normal" and the buttons sat directly under the paragraph. */
+  gap: var(--space-8);
 }
 .hero__aside p {
   margin: 0;
