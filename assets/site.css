@@ -1049,6 +1049,30 @@ section {
   color: var(--muted);
 }
 
+/* Hosts' own story, below the portraits */
+.story {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  max-width: 58ch;
+}
+.story h3 {
+  font-size: var(--text-lg);
+}
+.story p {
+  margin-top: var(--space-5);
+  color: var(--ink-soft);
+}
+.story__close {
+  margin-top: var(--space-8);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink);
+}
+/* Breathing room before the booking band */
+#hosts {
+  padding-bottom: calc(var(--section-y) + clamp(1.5rem, 5vw, 3rem));
+}
+
 /* ---------- Booking band ---------- */
 .book {
   background: var(--primary);
