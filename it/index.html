@@ -31,12 +31,19 @@
     <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
 
     <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://api.fontshare.com/v2/css?f[]=erode@400,500&f[]=switzer@400,500,600&display=swap"
     />
     <link rel="stylesheet" href="../assets/site.css" />
-    <link rel="preload" as="image" href="../assets/photos/hero-autumn.webp" fetchpriority="high" />
+    <link
+      rel="preload"
+      as="image"
+      imagesrcset="../assets/photos/hero-autumn-sm.webp 1200w, ../assets/photos/hero-autumn.webp 1920w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
 
     <script type="application/ld+json">
       {
@@ -139,14 +146,14 @@
           <picture>
             <source
               type="image/webp"
-              srcset="../assets/photos/hero-autumn-sm.webp 1200w, ../assets/photos/hero-autumn.webp 2400w"
+              srcset="../assets/photos/hero-autumn-sm.webp 1200w, ../assets/photos/hero-autumn.webp 1920w"
               sizes="100vw"
             />
             <img
               src="../assets/photos/hero-autumn.jpg"
               alt="Butterfly Cottage in autunno, muri bianchi intonacati, rivestimento in larice e tetto in ardesia, con alberi dorati sullo sfondo"
-              width="2400"
-              height="625"
+              width="1920"
+              height="500"
               fetchpriority="high"
             />
           </picture>
@@ -196,8 +203,8 @@
           <figure class="reveal" style="margin: 0">
             <div class="frame">
               <picture>
-                <source type="image/webp" srcset="../assets/photos/terrace-sm.webp 800w, ../assets/photos/terrace.webp 1600w" sizes="(min-width: 900px) 45vw, 92vw" />
-                <img src="../assets/photos/terrace.jpg" alt="Tavolo e panca in teak sul patio in ghiaia accanto al frontone bianco del cottage, foglie autunnali a terra" width="1600" height="1200" loading="lazy" />
+                <source type="image/webp" srcset="../assets/photos/terrace-sm.webp 800w, ../assets/photos/terrace.webp 900w" sizes="(min-width: 900px) 45vw, 92vw" />
+                <img src="../assets/photos/terrace.jpg" alt="Tavolo e panca in teak sul patio in ghiaia accanto al frontone bianco del cottage, foglie autunnali a terra" width="900" height="675" loading="lazy" />
               </picture>
             </div>
             <figcaption class="caption">Il vostro patio privato, sul lato tranquillo del giardino.</figcaption>
@@ -211,8 +218,8 @@
           <figure class="reveal" style="margin: 0">
             <div class="frame frame--portrait">
               <picture>
-                <source type="image/webp" srcset="../assets/photos/doors-sm.webp 800w, ../assets/photos/doors.webp 1600w" sizes="(min-width: 900px) 45vw, 92vw" />
-                <img src="../assets/photos/doors.jpg" alt="Vista interna verso le porte finestre del giardino, con poltrona color prugna, tappeto e lucernario sopra" width="1200" height="1600" loading="lazy" />
+                <source type="image/webp" srcset="../assets/photos/doors-sm.webp 600w, ../assets/photos/doors.webp 675w" sizes="(min-width: 900px) 45vw, 92vw" />
+                <img src="../assets/photos/doors.jpg" alt="Vista interna verso le porte finestre del giardino, con poltrona color prugna, tappeto e lucernario sopra" width="675" height="900" loading="lazy" />
               </picture>
             </div>
           </figure>
@@ -341,34 +348,64 @@
 
           <div class="gallery reveal">
             <button class="shot" data-full="../assets/photos/dining.jpg" aria-label="Ingrandisci la foto, tavolo da pranzo accanto alla cucina">
-              <img src="../assets/photos/dining-sm.jpg" alt="Tavolo da pranzo in legno per due accanto alla cucina, con televisore a parete" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/dining-sm.webp" />
+                <img src="../assets/photos/dining-sm.jpg" alt="Tavolo da pranzo in legno per due accanto alla cucina, con televisore a parete" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/bedroom.jpg" aria-label="Ingrandisci la foto, camera con letto in legno">
-              <img src="../assets/photos/bedroom-sm.jpg" alt="Camera con letto in legno, cuscini color petrolio e una lampada a parete accanto all'armadio" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/bedroom-sm.webp" />
+                <img src="../assets/photos/bedroom-sm.jpg" alt="Camera con letto in legno, cuscini color petrolio e una lampada a parete accanto all'armadio" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/kitchen.jpg" aria-label="Ingrandisci la foto, cucina">
-              <img src="../assets/photos/kitchen-sm.jpg" alt="Cucina con ante bianche, piano in vetroceramica, cappa in acciaio e paraschizzi scuro a motivi" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/kitchen-sm.webp" />
+                <img src="../assets/photos/kitchen-sm.jpg" alt="Cucina con ante bianche, piano in vetroceramica, cappa in acciaio e paraschizzi scuro a motivi" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/bath-shower.jpg" aria-label="Ingrandisci la foto, doccia del bagno">
-              <img src="../assets/photos/bath-shower-sm.jpg" alt="Doccia walk-in con porta in vetro, lavabo e WC nel bagno privato" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/bath-shower-sm.webp" />
+                <img src="../assets/photos/bath-shower-sm.jpg" alt="Doccia walk-in con porta in vetro, lavabo e WC nel bagno privato" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/open-plan.jpg" aria-label="Ingrandisci la foto, spazio giorno open space">
-              <img src="../assets/photos/open-plan-sm.jpg" alt="Spazio giorno open space visto dalla cucina, con tavolo da pranzo, zona notte e porte del giardino" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/open-plan-sm.webp" />
+                <img src="../assets/photos/open-plan-sm.jpg" alt="Spazio giorno open space visto dalla cucina, con tavolo da pranzo, zona notte e porte del giardino" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/hall.jpg" aria-label="Ingrandisci la foto, ingresso">
-              <img src="../assets/photos/hall-sm.jpg" alt="Ingresso con appendiabiti, divano letto color prugna e tre stampe di farfalle incorniciate alla parete" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/hall-sm.webp" />
+                <img src="../assets/photos/hall-sm.jpg" alt="Ingresso con appendiabiti, divano letto color prugna e tre stampe di farfalle incorniciate alla parete" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/bath-basin.jpg" aria-label="Ingrandisci la foto, lavabo del bagno">
-              <img src="../assets/photos/bath-basin-sm.jpg" alt="Lavabo del bagno con mobile a specchio sopra e parete scura effetto pietra" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/bath-basin-sm.webp" />
+                <img src="../assets/photos/bath-basin-sm.jpg" alt="Lavabo del bagno con mobile a specchio sopra e parete scura effetto pietra" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/bedroom-2.jpg" aria-label="Ingrandisci la foto, camera con lampade da lettura">
-              <img src="../assets/photos/bedroom-2-sm.jpg" alt="Camera vista dai piedi del letto, con lampade da lettura accese ai due lati" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/bedroom-2-sm.webp" />
+                <img src="../assets/photos/bedroom-2-sm.jpg" alt="Camera vista dai piedi del letto, con lampade da lettura accese ai due lati" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/garden.jpg" aria-label="Ingrandisci la foto, giardino davanti al cottage">
-              <img src="../assets/photos/garden-sm.jpg" alt="Prato e panchina davanti al frontone bianco del cottage in una mattina d'autunno" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/garden-sm.webp" />
+                <img src="../assets/photos/garden-sm.jpg" alt="Prato e panchina davanti al frontone bianco del cottage in una mattina d'autunno" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/bed-window.jpg" aria-label="Ingrandisci la foto, letto accanto alla finestra">
-              <img src="../assets/photos/bed-window-sm.jpg" alt="Letto accanto alla finestra, con una porta in legno massello e cuscini color petrolio" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/bed-window-sm.webp" />
+                <img src="../assets/photos/bed-window-sm.jpg" alt="Letto accanto alla finestra, con una porta in legno massello e cuscini color petrolio" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
           </div>
 
@@ -576,17 +613,17 @@
 
           <div class="hosts reveal">
             <figure class="host" style="margin: 0">
-              <img src="../assets/photos/host-sarah.jpg" alt="Sarah, una dei padroni di casa, all'aperto con una giacca blu" width="480" height="480" loading="lazy" />
+              <img src="../assets/photos/host-sarah.jpg" alt="Sarah, una dei padroni di casa, all'aperto con una giacca blu" width="240" height="400" loading="lazy" />
               <h3>Sarah</h3>
               <p>Vi accoglie all'arrivo e conosce ogni sentiero del bosco.</p>
             </figure>
             <figure class="host" style="margin: 0">
-              <img src="../assets/photos/host-daniel.jpg" alt="Daniel, uno dei padroni di casa, beve da una tazza" width="480" height="480" loading="lazy" />
+              <img src="../assets/photos/host-daniel.jpg" alt="Daniel, uno dei padroni di casa, beve da una tazza" width="240" height="400" loading="lazy" />
               <h3>Daniel</h3>
               <p>Ha fatto le mappe, i panini e questo sito.</p>
             </figure>
             <figure class="host" style="margin: 0">
-              <img src="../assets/photos/host-lucy.jpg" alt="Lucy, la dalmata di casa, seduta su una pedana di legno nel bosco" width="480" height="480" loading="lazy" />
+              <img src="../assets/photos/host-lucy.jpg" alt="Lucy, la dalmata di casa, seduta su una pedana di legno nel bosco" width="240" height="400" loading="lazy" />
               <h3>Lucy</h3>
               <p>Dalmata. Risponde in austriaco. Non ha niente contro gli altri cani.</p>
             </figure>

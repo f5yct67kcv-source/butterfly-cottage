@@ -31,12 +31,19 @@
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 
     <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://api.fontshare.com/v2/css?f[]=erode@400,500&f[]=switzer@400,500,600&display=swap"
     />
     <link rel="stylesheet" href="assets/site.css" />
-    <link rel="preload" as="image" href="assets/photos/hero-autumn.webp" fetchpriority="high" />
+    <link
+      rel="preload"
+      as="image"
+      imagesrcset="assets/photos/hero-autumn-sm.webp 1200w, assets/photos/hero-autumn.webp 1920w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
 
     <script type="application/ld+json">
       {
@@ -139,14 +146,14 @@
           <picture>
             <source
               type="image/webp"
-              srcset="assets/photos/hero-autumn-sm.webp 1200w, assets/photos/hero-autumn.webp 2400w"
+              srcset="assets/photos/hero-autumn-sm.webp 1200w, assets/photos/hero-autumn.webp 1920w"
               sizes="100vw"
             />
             <img
               src="assets/photos/hero-autumn.jpg"
               alt="Butterfly Cottage in autumn: white harled walls, larch cladding and a slate roof, with golden trees behind"
-              width="2400"
-              height="625"
+              width="1920"
+              height="500"
               fetchpriority="high"
             />
           </picture>
@@ -196,8 +203,8 @@
           <figure class="reveal" style="margin: 0">
             <div class="frame">
               <picture>
-                <source type="image/webp" srcset="assets/photos/terrace-sm.webp 800w, assets/photos/terrace.webp 1600w" sizes="(min-width: 900px) 45vw, 92vw" />
-                <img src="assets/photos/terrace.jpg" alt="Teak table and bench on the gravel patio beside the cottage's white gable, autumn leaves on the ground" width="1600" height="1200" loading="lazy" />
+                <source type="image/webp" srcset="assets/photos/terrace-sm.webp 800w, assets/photos/terrace.webp 900w" sizes="(min-width: 900px) 45vw, 92vw" />
+                <img src="assets/photos/terrace.jpg" alt="Teak table and bench on the gravel patio beside the cottage's white gable, autumn leaves on the ground" width="900" height="675" loading="lazy" />
               </picture>
             </div>
             <figcaption class="caption">Your own patio, on the quiet side of the garden.</figcaption>
@@ -211,8 +218,8 @@
           <figure class="reveal" style="margin: 0">
             <div class="frame frame--portrait">
               <picture>
-                <source type="image/webp" srcset="assets/photos/doors-sm.webp 800w, assets/photos/doors.webp 1600w" sizes="(min-width: 900px) 45vw, 92vw" />
-                <img src="assets/photos/doors.jpg" alt="Interior looking towards the glazed garden doors, with a plum armchair, rug and roof light above" width="1200" height="1600" loading="lazy" />
+                <source type="image/webp" srcset="assets/photos/doors-sm.webp 600w, assets/photos/doors.webp 675w" sizes="(min-width: 900px) 45vw, 92vw" />
+                <img src="assets/photos/doors.jpg" alt="Interior looking towards the glazed garden doors, with a plum armchair, rug and roof light above" width="675" height="900" loading="lazy" />
               </picture>
             </div>
           </figure>
@@ -340,34 +347,64 @@
 
           <div class="gallery reveal">
             <button class="shot" data-full="assets/photos/dining.jpg" aria-label="Enlarge photograph, dining table beside the kitchen">
-              <img src="assets/photos/dining-sm.jpg" alt="Wooden dining table for two beside the kitchen, with a wall-mounted television" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="assets/photos/dining-sm.webp" />
+                <img src="assets/photos/dining-sm.jpg" alt="Wooden dining table for two beside the kitchen, with a wall-mounted television" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="assets/photos/bedroom.jpg" aria-label="Enlarge photograph, bedroom with wooden bed frame">
-              <img src="assets/photos/bedroom-sm.jpg" alt="Bedroom with wooden bed frame, teal cushions and a wall lamp beside the wardrobe" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="assets/photos/bedroom-sm.webp" />
+                <img src="assets/photos/bedroom-sm.jpg" alt="Bedroom with wooden bed frame, teal cushions and a wall lamp beside the wardrobe" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="assets/photos/kitchen.jpg" aria-label="Enlarge photograph, kitchen">
-              <img src="assets/photos/kitchen-sm.jpg" alt="Kitchen with white units, ceramic hob, stainless extractor hood and dark patterned splashback" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="assets/photos/kitchen-sm.webp" />
+                <img src="assets/photos/kitchen-sm.jpg" alt="Kitchen with white units, ceramic hob, stainless extractor hood and dark patterned splashback" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="assets/photos/bath-shower.jpg" aria-label="Enlarge photograph, walk-in shower">
-              <img src="assets/photos/bath-shower-sm.jpg" alt="Walk-in shower with glass door, basin and WC in the en-suite bathroom" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="assets/photos/bath-shower-sm.webp" />
+                <img src="assets/photos/bath-shower-sm.jpg" alt="Walk-in shower with glass door, basin and WC in the en-suite bathroom" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="assets/photos/open-plan.jpg" aria-label="Enlarge photograph, open-plan living space">
-              <img src="assets/photos/open-plan-sm.jpg" alt="Open-plan living space seen from the kitchen, with dining table, bed area and garden doors" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="assets/photos/open-plan-sm.webp" />
+                <img src="assets/photos/open-plan-sm.jpg" alt="Open-plan living space seen from the kitchen, with dining table, bed area and garden doors" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="assets/photos/hall.jpg" aria-label="Enlarge photograph, entrance area">
-              <img src="assets/photos/hall-sm.jpg" alt="Entrance area with coat rack, plum sofa bed and three framed butterfly prints on the wall" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="assets/photos/hall-sm.webp" />
+                <img src="assets/photos/hall-sm.jpg" alt="Entrance area with coat rack, plum sofa bed and three framed butterfly prints on the wall" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="assets/photos/bath-basin.jpg" aria-label="Enlarge photograph, bathroom basin">
-              <img src="assets/photos/bath-basin-sm.jpg" alt="Bathroom basin with mirrored cabinet above and dark stone-effect wall" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="assets/photos/bath-basin-sm.webp" />
+                <img src="assets/photos/bath-basin-sm.jpg" alt="Bathroom basin with mirrored cabinet above and dark stone-effect wall" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="assets/photos/bedroom-2.jpg" aria-label="Enlarge photograph, bedroom with reading lamps">
-              <img src="assets/photos/bedroom-2-sm.jpg" alt="Bedroom from the foot of the bed, with warm reading lamps lit either side" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="assets/photos/bedroom-2-sm.webp" />
+                <img src="assets/photos/bedroom-2-sm.jpg" alt="Bedroom from the foot of the bed, with warm reading lamps lit either side" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="assets/photos/garden.jpg" aria-label="Enlarge photograph, garden in front of the cottage">
-              <img src="assets/photos/garden-sm.jpg" alt="Lawn and garden bench in front of the cottage's white gable on an autumn morning" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="assets/photos/garden-sm.webp" />
+                <img src="assets/photos/garden-sm.jpg" alt="Lawn and garden bench in front of the cottage's white gable on an autumn morning" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="assets/photos/bed-window.jpg" aria-label="Enlarge photograph, bed beside the window">
-              <img src="assets/photos/bed-window-sm.jpg" alt="Bed beside the window, with a solid wooden door and teal cushions" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="assets/photos/bed-window-sm.webp" />
+                <img src="assets/photos/bed-window-sm.jpg" alt="Bed beside the window, with a solid wooden door and teal cushions" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
           </div>
 
@@ -574,17 +611,17 @@
 
           <div class="hosts reveal">
             <figure class="host" style="margin: 0">
-              <img src="assets/photos/host-sarah.jpg" alt="Sarah, one of the hosts, outdoors in a blue jacket" width="480" height="480" loading="lazy" />
+              <img src="assets/photos/host-sarah.jpg" alt="Sarah, one of the hosts, outdoors in a blue jacket" width="240" height="400" loading="lazy" />
               <h3>Sarah</h3>
               <p>Meets you on arrival, knows every walk in the woods.</p>
             </figure>
             <figure class="host" style="margin: 0">
-              <img src="assets/photos/host-daniel.jpg" alt="Daniel, one of the hosts, drinking from a mug" width="480" height="480" loading="lazy" />
+              <img src="assets/photos/host-daniel.jpg" alt="Daniel, one of the hosts, drinking from a mug" width="240" height="400" loading="lazy" />
               <h3>Daniel</h3>
               <p>Made the maps, the sandwiches and this website.</p>
             </figure>
             <figure class="host" style="margin: 0">
-              <img src="assets/photos/host-lucy.jpg" alt="Lucy, the hosts' Dalmatian, sitting on a wooden deck in the forest" width="480" height="480" loading="lazy" />
+              <img src="assets/photos/host-lucy.jpg" alt="Lucy, the hosts' Dalmatian, sitting on a wooden deck in the forest" width="240" height="400" loading="lazy" />
               <h3>Lucy</h3>
               <p>Dalmatian. Answers in Austrian. Approves of other dogs.</p>
             </figure>

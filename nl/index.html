@@ -31,12 +31,19 @@
     <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
 
     <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://api.fontshare.com/v2/css?f[]=erode@400,500&f[]=switzer@400,500,600&display=swap"
     />
     <link rel="stylesheet" href="../assets/site.css" />
-    <link rel="preload" as="image" href="../assets/photos/hero-autumn.webp" fetchpriority="high" />
+    <link
+      rel="preload"
+      as="image"
+      imagesrcset="../assets/photos/hero-autumn-sm.webp 1200w, ../assets/photos/hero-autumn.webp 1920w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
 
     <script type="application/ld+json">
       {
@@ -139,14 +146,14 @@
           <picture>
             <source
               type="image/webp"
-              srcset="../assets/photos/hero-autumn-sm.webp 1200w, ../assets/photos/hero-autumn.webp 2400w"
+              srcset="../assets/photos/hero-autumn-sm.webp 1200w, ../assets/photos/hero-autumn.webp 1920w"
               sizes="100vw"
             />
             <img
               src="../assets/photos/hero-autumn.jpg"
               alt="Butterfly Cottage in de herfst, witgepleisterde muren, lariksbekleding en een leien dak, met gouden bomen erachter"
-              width="2400"
-              height="625"
+              width="1920"
+              height="500"
               fetchpriority="high"
             />
           </picture>
@@ -196,8 +203,8 @@
           <figure class="reveal" style="margin: 0">
             <div class="frame">
               <picture>
-                <source type="image/webp" srcset="../assets/photos/terrace-sm.webp 800w, ../assets/photos/terrace.webp 1600w" sizes="(min-width: 900px) 45vw, 92vw" />
-                <img src="../assets/photos/terrace.jpg" alt="Teakhouten tafel en bank op het grindterras naast de witte gevel van de cottage, herfstbladeren op de grond" width="1600" height="1200" loading="lazy" />
+                <source type="image/webp" srcset="../assets/photos/terrace-sm.webp 800w, ../assets/photos/terrace.webp 900w" sizes="(min-width: 900px) 45vw, 92vw" />
+                <img src="../assets/photos/terrace.jpg" alt="Teakhouten tafel en bank op het grindterras naast de witte gevel van de cottage, herfstbladeren op de grond" width="900" height="675" loading="lazy" />
               </picture>
             </div>
             <figcaption class="caption">Uw eigen terras, aan de rustige kant van de tuin.</figcaption>
@@ -211,8 +218,8 @@
           <figure class="reveal" style="margin: 0">
             <div class="frame frame--portrait">
               <picture>
-                <source type="image/webp" srcset="../assets/photos/doors-sm.webp 800w, ../assets/photos/doors.webp 1600w" sizes="(min-width: 900px) 45vw, 92vw" />
-                <img src="../assets/photos/doors.jpg" alt="Blik naar binnen richting de beglaasde tuindeuren, met een pruimkleurige fauteuil, vloerkleed en dakraam erboven" width="1200" height="1600" loading="lazy" />
+                <source type="image/webp" srcset="../assets/photos/doors-sm.webp 600w, ../assets/photos/doors.webp 675w" sizes="(min-width: 900px) 45vw, 92vw" />
+                <img src="../assets/photos/doors.jpg" alt="Blik naar binnen richting de beglaasde tuindeuren, met een pruimkleurige fauteuil, vloerkleed en dakraam erboven" width="675" height="900" loading="lazy" />
               </picture>
             </div>
           </figure>
@@ -341,34 +348,64 @@
 
           <div class="gallery reveal">
             <button class="shot" data-full="../assets/photos/dining.jpg" aria-label="Foto vergroten, eettafel naast de keuken">
-              <img src="../assets/photos/dining-sm.jpg" alt="Houten eettafel voor twee naast de keuken, met een televisie aan de wand" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/dining-sm.webp" />
+                <img src="../assets/photos/dining-sm.jpg" alt="Houten eettafel voor twee naast de keuken, met een televisie aan de wand" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/bedroom.jpg" aria-label="Foto vergroten, slaapkamer met houten bed">
-              <img src="../assets/photos/bedroom-sm.jpg" alt="Slaapkamer met houten bed, petrolkleurige kussens en een wandlamp naast de kast" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/bedroom-sm.webp" />
+                <img src="../assets/photos/bedroom-sm.jpg" alt="Slaapkamer met houten bed, petrolkleurige kussens en een wandlamp naast de kast" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/kitchen.jpg" aria-label="Foto vergroten, keuken">
-              <img src="../assets/photos/kitchen-sm.jpg" alt="Keuken met witte fronten, keramische kookplaat, roestvrijstalen afzuigkap en donkere gedessineerde achterwand" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/kitchen-sm.webp" />
+                <img src="../assets/photos/kitchen-sm.jpg" alt="Keuken met witte fronten, keramische kookplaat, roestvrijstalen afzuigkap en donkere gedessineerde achterwand" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/bath-shower.jpg" aria-label="Foto vergroten, douche in de badkamer">
-              <img src="../assets/photos/bath-shower-sm.jpg" alt="Inloopdouche met glazen deur, wastafel en toilet in de eigen badkamer" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/bath-shower-sm.webp" />
+                <img src="../assets/photos/bath-shower-sm.jpg" alt="Inloopdouche met glazen deur, wastafel en toilet in de eigen badkamer" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/open-plan.jpg" aria-label="Foto vergroten, open woonruimte">
-              <img src="../assets/photos/open-plan-sm.jpg" alt="Open woonruimte gezien vanuit de keuken, met eettafel, slaapgedeelte en tuindeuren" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/open-plan-sm.webp" />
+                <img src="../assets/photos/open-plan-sm.jpg" alt="Open woonruimte gezien vanuit de keuken, met eettafel, slaapgedeelte en tuindeuren" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/hall.jpg" aria-label="Foto vergroten, entree">
-              <img src="../assets/photos/hall-sm.jpg" alt="Entree met kapstok, pruimkleurige slaapbank en drie ingelijste vlinderprenten aan de wand" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/hall-sm.webp" />
+                <img src="../assets/photos/hall-sm.jpg" alt="Entree met kapstok, pruimkleurige slaapbank en drie ingelijste vlinderprenten aan de wand" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/bath-basin.jpg" aria-label="Foto vergroten, wastafel in de badkamer">
-              <img src="../assets/photos/bath-basin-sm.jpg" alt="Wastafel in de badkamer met spiegelkast erboven en een donkere wand met steenlook" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/bath-basin-sm.webp" />
+                <img src="../assets/photos/bath-basin-sm.jpg" alt="Wastafel in de badkamer met spiegelkast erboven en een donkere wand met steenlook" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/bedroom-2.jpg" aria-label="Foto vergroten, slaapkamer met leeslampen">
-              <img src="../assets/photos/bedroom-2-sm.jpg" alt="Slaapkamer vanaf het voeteneind, met warm brandende leeslampen aan weerszijden" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/bedroom-2-sm.webp" />
+                <img src="../assets/photos/bedroom-2-sm.jpg" alt="Slaapkamer vanaf het voeteneind, met warm brandende leeslampen aan weerszijden" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/garden.jpg" aria-label="Foto vergroten, tuin voor de cottage">
-              <img src="../assets/photos/garden-sm.jpg" alt="Gazon en tuinbank voor de witte gevel van de cottage op een herfstochtend" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/garden-sm.webp" />
+                <img src="../assets/photos/garden-sm.jpg" alt="Gazon en tuinbank voor de witte gevel van de cottage op een herfstochtend" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/bed-window.jpg" aria-label="Foto vergroten, bed bij het raam">
-              <img src="../assets/photos/bed-window-sm.jpg" alt="Bed naast het raam, met een massief houten deur en petrolkleurige kussens" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/bed-window-sm.webp" />
+                <img src="../assets/photos/bed-window-sm.jpg" alt="Bed naast het raam, met een massief houten deur en petrolkleurige kussens" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
           </div>
 
@@ -576,17 +613,17 @@
 
           <div class="hosts reveal">
             <figure class="host" style="margin: 0">
-              <img src="../assets/photos/host-sarah.jpg" alt="Sarah, een van de gastgevers, buiten in een blauwe jas" width="480" height="480" loading="lazy" />
+              <img src="../assets/photos/host-sarah.jpg" alt="Sarah, een van de gastgevers, buiten in een blauwe jas" width="240" height="400" loading="lazy" />
               <h3>Sarah</h3>
               <p>Verwelkomt u bij aankomst en kent elk pad in het bos.</p>
             </figure>
             <figure class="host" style="margin: 0">
-              <img src="../assets/photos/host-daniel.jpg" alt="Daniel, een van de gastgevers, drinkt uit een mok" width="480" height="480" loading="lazy" />
+              <img src="../assets/photos/host-daniel.jpg" alt="Daniel, een van de gastgevers, drinkt uit een mok" width="240" height="400" loading="lazy" />
               <h3>Daniel</h3>
               <p>Maakte de kaarten, de broodjes en deze website.</p>
             </figure>
             <figure class="host" style="margin: 0">
-              <img src="../assets/photos/host-lucy.jpg" alt="Lucy, de dalmatiër van de gastgevers, zit op een houten vlonder in het bos" width="480" height="480" loading="lazy" />
+              <img src="../assets/photos/host-lucy.jpg" alt="Lucy, de dalmatiër van de gastgevers, zit op een houten vlonder in het bos" width="240" height="400" loading="lazy" />
               <h3>Lucy</h3>
               <p>Dalmatiër. Antwoordt in het Oostenrijks. Heeft niets tegen andere honden.</p>
             </figure>

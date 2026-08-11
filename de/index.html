@@ -31,12 +31,19 @@
     <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
 
     <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://api.fontshare.com/v2/css?f[]=erode@400,500&f[]=switzer@400,500,600&display=swap"
     />
     <link rel="stylesheet" href="../assets/site.css" />
-    <link rel="preload" as="image" href="../assets/photos/hero-autumn.webp" fetchpriority="high" />
+    <link
+      rel="preload"
+      as="image"
+      imagesrcset="../assets/photos/hero-autumn-sm.webp 1200w, ../assets/photos/hero-autumn.webp 1920w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
 
     <script type="application/ld+json">
       {
@@ -139,14 +146,14 @@
           <picture>
             <source
               type="image/webp"
-              srcset="../assets/photos/hero-autumn-sm.webp 1200w, ../assets/photos/hero-autumn.webp 2400w"
+              srcset="../assets/photos/hero-autumn-sm.webp 1200w, ../assets/photos/hero-autumn.webp 1920w"
               sizes="100vw"
             />
             <img
               src="../assets/photos/hero-autumn.jpg"
               alt="Butterfly Cottage im Herbst, weiss verputzte Wände, Lärchenholz und ein Schieferdach, dahinter goldene Bäume"
-              width="2400"
-              height="625"
+              width="1920"
+              height="500"
               fetchpriority="high"
             />
           </picture>
@@ -196,8 +203,8 @@
           <figure class="reveal" style="margin: 0">
             <div class="frame">
               <picture>
-                <source type="image/webp" srcset="../assets/photos/terrace-sm.webp 800w, ../assets/photos/terrace.webp 1600w" sizes="(min-width: 900px) 45vw, 92vw" />
-                <img src="../assets/photos/terrace.jpg" alt="Teakholztisch und Bank auf der Kiesterrasse neben dem weissen Giebel des Cottages, Herbstlaub auf dem Boden" width="1600" height="1200" loading="lazy" />
+                <source type="image/webp" srcset="../assets/photos/terrace-sm.webp 800w, ../assets/photos/terrace.webp 900w" sizes="(min-width: 900px) 45vw, 92vw" />
+                <img src="../assets/photos/terrace.jpg" alt="Teakholztisch und Bank auf der Kiesterrasse neben dem weissen Giebel des Cottages, Herbstlaub auf dem Boden" width="900" height="675" loading="lazy" />
               </picture>
             </div>
             <figcaption class="caption">Ihre eigene Terrasse, auf der ruhigen Seite des Gartens.</figcaption>
@@ -211,8 +218,8 @@
           <figure class="reveal" style="margin: 0">
             <div class="frame frame--portrait">
               <picture>
-                <source type="image/webp" srcset="../assets/photos/doors-sm.webp 800w, ../assets/photos/doors.webp 1600w" sizes="(min-width: 900px) 45vw, 92vw" />
-                <img src="../assets/photos/doors.jpg" alt="Blick nach innen zu den verglasten Gartentüren, mit pflaumenfarbenem Sessel, Teppich und Dachfenster darüber" width="1200" height="1600" loading="lazy" />
+                <source type="image/webp" srcset="../assets/photos/doors-sm.webp 600w, ../assets/photos/doors.webp 675w" sizes="(min-width: 900px) 45vw, 92vw" />
+                <img src="../assets/photos/doors.jpg" alt="Blick nach innen zu den verglasten Gartentüren, mit pflaumenfarbenem Sessel, Teppich und Dachfenster darüber" width="675" height="900" loading="lazy" />
               </picture>
             </div>
           </figure>
@@ -341,34 +348,64 @@
 
           <div class="gallery reveal">
             <button class="shot" data-full="../assets/photos/dining.jpg" aria-label="Foto vergrössern, Esstisch neben der Küche">
-              <img src="../assets/photos/dining-sm.jpg" alt="Hölzerner Esstisch für zwei neben der Küche, mit einem Fernseher an der Wand" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/dining-sm.webp" />
+                <img src="../assets/photos/dining-sm.jpg" alt="Hölzerner Esstisch für zwei neben der Küche, mit einem Fernseher an der Wand" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/bedroom.jpg" aria-label="Foto vergrössern, Schlafzimmer mit Holzbett">
-              <img src="../assets/photos/bedroom-sm.jpg" alt="Schlafzimmer mit Holzbett, petrolfarbenen Kissen und einer Wandleuchte neben dem Schrank" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/bedroom-sm.webp" />
+                <img src="../assets/photos/bedroom-sm.jpg" alt="Schlafzimmer mit Holzbett, petrolfarbenen Kissen und einer Wandleuchte neben dem Schrank" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/kitchen.jpg" aria-label="Foto vergrössern, Küche">
-              <img src="../assets/photos/kitchen-sm.jpg" alt="Küche mit weissen Fronten, Glaskeramikfeld, Dunstabzug aus Edelstahl und dunkler, gemusterter Rückwand" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/kitchen-sm.webp" />
+                <img src="../assets/photos/kitchen-sm.jpg" alt="Küche mit weissen Fronten, Glaskeramikfeld, Dunstabzug aus Edelstahl und dunkler, gemusterter Rückwand" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/bath-shower.jpg" aria-label="Foto vergrössern, Dusche im Bad">
-              <img src="../assets/photos/bath-shower-sm.jpg" alt="Bodenebene Dusche mit Glastür, Waschbecken und WC im eigenen Bad" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/bath-shower-sm.webp" />
+                <img src="../assets/photos/bath-shower-sm.jpg" alt="Bodenebene Dusche mit Glastür, Waschbecken und WC im eigenen Bad" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/open-plan.jpg" aria-label="Foto vergrössern, offener Wohnraum">
-              <img src="../assets/photos/open-plan-sm.jpg" alt="Offener Wohnraum von der Küche aus gesehen, mit Esstisch, Schlafbereich und Gartentüren" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/open-plan-sm.webp" />
+                <img src="../assets/photos/open-plan-sm.jpg" alt="Offener Wohnraum von der Küche aus gesehen, mit Esstisch, Schlafbereich und Gartentüren" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/hall.jpg" aria-label="Foto vergrössern, Eingangsbereich">
-              <img src="../assets/photos/hall-sm.jpg" alt="Eingangsbereich mit Garderobe, pflaumenfarbenem Schlafsofa und drei gerahmten Schmetterlingsbildern" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/hall-sm.webp" />
+                <img src="../assets/photos/hall-sm.jpg" alt="Eingangsbereich mit Garderobe, pflaumenfarbenem Schlafsofa und drei gerahmten Schmetterlingsbildern" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/bath-basin.jpg" aria-label="Foto vergrössern, Waschbecken im Bad">
-              <img src="../assets/photos/bath-basin-sm.jpg" alt="Waschbecken im Bad mit Spiegelschrank darüber und dunkler Wand in Steinoptik" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/bath-basin-sm.webp" />
+                <img src="../assets/photos/bath-basin-sm.jpg" alt="Waschbecken im Bad mit Spiegelschrank darüber und dunkler Wand in Steinoptik" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/bedroom-2.jpg" aria-label="Foto vergrössern, Schlafzimmer mit Leselampen">
-              <img src="../assets/photos/bedroom-2-sm.jpg" alt="Schlafzimmer vom Fussende des Bettes aus, mit warm leuchtenden Leselampen auf beiden Seiten" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/bedroom-2-sm.webp" />
+                <img src="../assets/photos/bedroom-2-sm.jpg" alt="Schlafzimmer vom Fussende des Bettes aus, mit warm leuchtenden Leselampen auf beiden Seiten" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/garden.jpg" aria-label="Foto vergrössern, Garten vor dem Cottage">
-              <img src="../assets/photos/garden-sm.jpg" alt="Rasen und Gartenbank vor dem weissen Giebel des Cottages an einem Herbstmorgen" width="800" height="600" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/garden-sm.webp" />
+                <img src="../assets/photos/garden-sm.jpg" alt="Rasen und Gartenbank vor dem weissen Giebel des Cottages an einem Herbstmorgen" width="800" height="600" loading="lazy" />
+              </picture>
             </button>
             <button class="shot" data-full="../assets/photos/bed-window.jpg" aria-label="Foto vergrössern, Bett am Fenster">
-              <img src="../assets/photos/bed-window-sm.jpg" alt="Bett neben dem Fenster, mit einer massiven Holztür und petrolfarbenen Kissen" width="600" height="800" loading="lazy" />
+              <picture>
+                <source type="image/webp" srcset="../assets/photos/bed-window-sm.webp" />
+                <img src="../assets/photos/bed-window-sm.jpg" alt="Bett neben dem Fenster, mit einer massiven Holztür und petrolfarbenen Kissen" width="600" height="800" loading="lazy" />
+              </picture>
             </button>
           </div>
 
@@ -579,17 +616,17 @@
 
           <div class="hosts reveal">
             <figure class="host" style="margin: 0">
-              <img src="../assets/photos/host-sarah.jpg" alt="Sarah, eine der Gastgeberinnen, draussen in einer blauen Jacke" width="480" height="480" loading="lazy" />
+              <img src="../assets/photos/host-sarah.jpg" alt="Sarah, eine der Gastgeberinnen, draussen in einer blauen Jacke" width="240" height="400" loading="lazy" />
               <h3>Sarah</h3>
               <p>Begrüsst Sie bei der Ankunft und kennt jeden Weg im Wald.</p>
             </figure>
             <figure class="host" style="margin: 0">
-              <img src="../assets/photos/host-daniel.jpg" alt="Daniel, einer der Gastgeber, trinkt aus einer Tasse" width="480" height="480" loading="lazy" />
+              <img src="../assets/photos/host-daniel.jpg" alt="Daniel, einer der Gastgeber, trinkt aus einer Tasse" width="240" height="400" loading="lazy" />
               <h3>Daniel</h3>
               <p>Hat die Karten gemacht, die Sandwiches und diese Website.</p>
             </figure>
             <figure class="host" style="margin: 0">
-              <img src="../assets/photos/host-lucy.jpg" alt="Lucy, die Dalmatinerin der Gastgeber, sitzt auf einer Holzterrasse im Wald" width="480" height="480" loading="lazy" />
+              <img src="../assets/photos/host-lucy.jpg" alt="Lucy, die Dalmatinerin der Gastgeber, sitzt auf einer Holzterrasse im Wald" width="240" height="400" loading="lazy" />
               <h3>Lucy</h3>
               <p>Dalmatinerin. Antwortet auf Österreichisch. Hat nichts gegen andere Hunde.</p>
             </figure>

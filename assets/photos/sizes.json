@@ -1,0 +1,154 @@
+{
+ "bath-basin": [
+  675,
+  900
+ ],
+ "bath-basin-sm": [
+  600,
+  800
+ ],
+ "bath-shower": [
+  675,
+  900
+ ],
+ "bath-shower-sm": [
+  600,
+  800
+ ],
+ "bed-window": [
+  675,
+  900
+ ],
+ "bed-window-sm": [
+  600,
+  800
+ ],
+ "bedroom": [
+  900,
+  675
+ ],
+ "bedroom-2": [
+  675,
+  900
+ ],
+ "bedroom-2-sm": [
+  600,
+  800
+ ],
+ "bedroom-3": [
+  675,
+  900
+ ],
+ "bedroom-3-sm": [
+  600,
+  800
+ ],
+ "bedroom-sm": [
+  800,
+  600
+ ],
+ "dining": [
+  900,
+  675
+ ],
+ "dining-sm": [
+  800,
+  600
+ ],
+ "doors": [
+  675,
+  900
+ ],
+ "doors-sm": [
+  600,
+  800
+ ],
+ "garden": [
+  900,
+  675
+ ],
+ "garden-sm": [
+  800,
+  600
+ ],
+ "hall": [
+  900,
+  675
+ ],
+ "hall-sm": [
+  800,
+  600
+ ],
+ "hero-autumn": [
+  1920,
+  500
+ ],
+ "hero-autumn-sm": [
+  1200,
+  313
+ ],
+ "hero-spring": [
+  1920,
+  500
+ ],
+ "hero-spring-sm": [
+  1200,
+  313
+ ],
+ "hero-winter": [
+  1920,
+  500
+ ],
+ "hero-winter-sm": [
+  1200,
+  313
+ ],
+ "host-daniel": [
+  240,
+  400
+ ],
+ "host-daniel-sm": [
+  240,
+  400
+ ],
+ "host-lucy": [
+  240,
+  400
+ ],
+ "host-lucy-sm": [
+  240,
+  400
+ ],
+ "host-sarah": [
+  240,
+  400
+ ],
+ "host-sarah-sm": [
+  240,
+  400
+ ],
+ "kitchen": [
+  900,
+  675
+ ],
+ "kitchen-sm": [
+  800,
+  600
+ ],
+ "open-plan": [
+  675,
+  900
+ ],
+ "open-plan-sm": [
+  600,
+  800
+ ],
+ "terrace": [
+  900,
+  675
+ ],
+ "terrace-sm": [
+  800,
+  600
+ ]
+}

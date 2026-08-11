@@ -713,6 +713,11 @@ section {
   display: block;
   height: 100%;
 }
+/* The WebP <picture> wrapper must not become a layout box of its own,
+   otherwise the img loses its percentage height inside the grid cell. */
+.shot picture {
+  display: contents;
+}
 .shot img {
   width: 100%;
   height: 100%;
