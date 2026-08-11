@@ -229,10 +229,15 @@ section {
 .header[data-scrolled='true'] {
   border-bottom-color: var(--line);
 }
+/* Seven nav entries, a four-language switcher and the booking button do not
+   fit the 1220px article measure, so the header gets a wider track. */
+.header .wrap {
+  max-width: 1400px;
+}
 .header__inner {
   display: flex;
   align-items: center;
-  gap: var(--space-6);
+  gap: var(--space-4);
   min-height: 4.75rem;
 }
 .brand {
@@ -294,7 +299,7 @@ section {
 .nav {
   display: flex;
   align-items: center;
-  gap: clamp(0.75rem, 1.8vw, 1.75rem);
+  gap: clamp(0.7rem, 1.1vw, 1.15rem);
 }
 .nav a {
   font-size: var(--text-sm);
