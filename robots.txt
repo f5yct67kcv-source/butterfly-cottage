@@ -1,0 +1,8 @@
+# Butterfly Cottage
+# Static site. Nothing here is private, everything may be indexed,
+# and the AI crawlers are welcome too.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.butterfly-cottage.co.uk/sitemap.xml

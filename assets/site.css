@@ -42,6 +42,7 @@
 
 :root,
 [data-theme='light'] {
+  color-scheme: light;
   --bg: #f5f2ea;
   --surface: #fdfbf6;
   --surface-2: #efeade;
@@ -64,6 +65,7 @@
 }
 
 [data-theme='dark'] {
+  color-scheme: dark;
   --bg: #141816;
   --surface: #1b201d;
   --surface-2: #232a26;
@@ -119,10 +121,12 @@ img {
 }
 a {
   color: inherit;
+  touch-action: manipulation;
 }
 button {
   font: inherit;
   color: inherit;
+  touch-action: manipulation;
 }
 :focus-visible {
   outline: 2px solid var(--primary);
@@ -203,6 +207,13 @@ p {
   max-width: var(--page);
   margin-inline: auto;
   padding-inline: var(--gutter);
+}
+/* Notch and rounded corners in landscape: only ever adds padding. */
+@supports (padding: max(0px)) {
+  .wrap {
+    padding-left: max(var(--gutter), env(safe-area-inset-left));
+    padding-right: max(var(--gutter), env(safe-area-inset-right));
+  }
 }
 section {
   padding-block: var(--section-y);
@@ -763,6 +774,7 @@ section {
   padding: clamp(1rem, 4vw, 3rem);
   background: rgb(12 16 14 / 0.94);
   backdrop-filter: blur(4px);
+  overscroll-behavior: contain;
 }
 .lightbox[open] {
   display: grid;
@@ -934,6 +946,7 @@ section {
   border-bottom: 1px solid var(--line);
 }
 .score__big {
+  font-variant-numeric: tabular-nums;
   font-family: var(--font-display);
   font-size: var(--text-2xl);
   line-height: 1;
@@ -949,6 +962,7 @@ section {
   margin-left: auto;
 }
 .score__bar {
+  font-variant-numeric: tabular-nums;
   display: grid;
   grid-template-columns: 6.5rem 1fr 2.2rem;
   gap: var(--space-3);
