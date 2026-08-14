@@ -65,6 +65,74 @@ upstream, not in this file. It needs `grantown/media/`, which holds the 24
 destination photos. Leaflet and the fonts come from a CDN, everything else is
 in the file.
 
+## Schriften (Anleitung auf Deutsch)
+
+Die Seite nutzt zwei Schriften von Fontshare, **Erode** für Überschriften und
+**Switzer** für den Fliesstext. Beide liegen im Projekt unter `assets/fonts/`
+und werden vom eigenen Server ausgeliefert, nicht von einem fremden CDN.
+
+**Warum selbst gehostet.** Lädt eine Seite Schriften von einem fremden Server,
+schickt der Browser bei jedem Aufruf die IP-Adresse des Besuchers dorthin, ohne
+dass jemand zugestimmt hat. Die Seite richtet sich an deutsche und
+niederländische Gäste, deshalb liegen die Dateien hier lokal. Nebenbei spart
+das auf dem Handy 200 bis 400 Millisekunden, weil zwei zusätzliche
+Verbindungsaufbauten wegfallen.
+
+**Was eingebunden ist.** Fünf Dateien, zusammen rund 90 KB:
+
+| Datei | verwendet für |
+|---|---|
+| `Erode-Regular.woff2` | Überschriften, Gewicht 400 |
+| `Erode-Medium.woff2` | Überschriften, Gewicht 500 |
+| `Switzer-Regular.woff2` | Fliesstext, Gewicht 400 |
+| `Switzer-Medium.woff2` | Fliesstext, Gewicht 500 |
+| `Switzer-Semibold.woff2` | Fliesstext, Gewicht 600 |
+
+**Wo es im Code steht.** Ganz oben in `assets/site.css` stehen die
+`@font-face`-Regeln. Der Pfad ist relativ zur CSS-Datei, also
+`url('fonts/Erode-Regular.woff2')`. In den vier HTML-Dateien werden die zwei
+meistgenutzten Schnitte vorgeladen, damit der Text sofort richtig erscheint:
+
+```html
+<link rel="preload" as="font" type="font/woff2" crossorigin
+      href="assets/fonts/Switzer-Regular.woff2" />
+```
+
+Das `crossorigin` muss dort stehen, auch wenn die Datei vom eigenen Server
+kommt. Ohne dieses Attribut lädt der Browser die Schrift zweimal.
+
+**Wenn eine Schrift ausgetauscht oder ergänzt werden soll:**
+
+1. Auf fontshare.com die Familie öffnen und „Download family" wählen.
+2. Aus dem Archiv nur die benötigten Dateien aus `Fonts/WEB/fonts/` nehmen,
+   also die `.woff2`. Andere Formate braucht kein aktueller Browser mehr.
+3. Die Dateien nach `assets/fonts/` legen.
+4. In `assets/site.css` einen `@font-face`-Block ergänzen oder anpassen.
+   Wichtig ist, dass `font-family` und `font-weight` zu dem passen, was im
+   restlichen CSS über `var(--font-display)` und `var(--font-body)` verwendet
+   wird. Sonst rechnet der Browser sich einen Schnitt zurecht und die Schrift
+   wirkt verzerrt.
+5. `font-display: swap` stehen lassen. Damit ist der Text sofort lesbar und
+   wird nachträglich in der richtigen Schrift gesetzt, statt kurz unsichtbar
+   zu bleiben.
+6. Wird ein Schnitt ergänzt, der sofort sichtbar ist, gehört auch dafür ein
+   `preload` in alle vier HTML-Dateien. Für Schnitte, die erst weiter unten
+   auf der Seite vorkommen, ist das nicht nötig.
+
+**Zur Lizenz.** Die Schriften stehen unter der Free Font EULA der Indian Type
+Foundry, sie liegt als `assets/fonts/LICENCE-Fontshare-FFL.txt` bei. Sie
+erlaubt kommerzielle Nutzung im Web ohne Gebühr. Der Hersteller liefert im
+Download selbst einen Ordner `Fonts/WEB` samt fertigem `@font-face`-CSS und
+einer Anleitung mit dem Titel „Installing Webfonts", das Selbst-Hosten ist
+also ausdrücklich vorgesehen. Im Lizenztext gibt es daneben eine Klausel gegen
+das Hochladen der Dateien auf öffentliche Server, die sich auf das
+Weitergeben an Dritte bezieht. Wer ganz sichergehen will, holt sich von der
+Indian Type Foundry eine kurze schriftliche Bestätigung.
+
+Die Schriftdateien selbst dürfen nicht weitergegeben werden, weder per Mail
+noch auf einem Stick. Wer sie braucht, lädt sie bei fontshare.com selbst
+herunter.
+
 ## Deployment
 
 Any static host works, the site has no server side. Copy the whole folder up.

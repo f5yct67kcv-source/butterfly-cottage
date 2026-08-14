@@ -3,6 +3,46 @@
    Design: limewash paper, slate-pine, larch copper. Erode + Switzer.
    ========================================================================== */
 
+/* ---------- Fonts ----------
+   Self-hosted, so no visitor IP reaches a third party and there is no extra
+   DNS and TLS handshake on the critical path. Files and the licence are in
+   assets/fonts/. Replacing them: see README. */
+@font-face {
+  font-family: 'Erode';
+  src: url('fonts/Erode-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Erode';
+  src: url('fonts/Erode-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Switzer';
+  src: url('fonts/Switzer-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Switzer';
+  src: url('fonts/Switzer-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Switzer';
+  src: url('fonts/Switzer-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ---------- Tokens ---------- */
 :root {
   --text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
@@ -936,6 +976,63 @@ section {
   }
 }
 
+/* ---------- FAQ ---------- */
+/* Native <details>, so it works without JavaScript and stays keyboard
+   operable and findable by the browser's own in-page search. */
+.faq {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  max-width: 68ch;
+}
+.faq > h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-4);
+}
+.faq__item {
+  border-top: 1px solid var(--line);
+}
+.faq__item:last-of-type {
+  border-bottom: 1px solid var(--line);
+}
+.faq__item summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-5);
+  padding-block: var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+  transition: color 0.2s;
+}
+.faq__item summary::-webkit-details-marker {
+  display: none;
+}
+.faq__item summary:hover {
+  color: var(--primary);
+}
+.faq__item summary::after {
+  content: '';
+  flex: none;
+  width: 0.5em;
+  height: 0.5em;
+  margin-top: 0.15em;
+  border-right: 1.5px solid var(--muted);
+  border-bottom: 1.5px solid var(--muted);
+  transform: rotate(45deg);
+  transition: transform 0.25s var(--ease);
+}
+.faq__item[open] summary::after {
+  transform: rotate(-135deg);
+}
+.faq__answer {
+  padding-bottom: var(--space-5);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
 /* ---------- Reviews ---------- */
 .score {
   display: flex;
@@ -1247,7 +1344,9 @@ section {
     transition: none;
   }
   .shot img,
-  .btn {
+  .btn,
+  .nav,
+  .faq__item summary::after {
     transition: none;
   }
 }
