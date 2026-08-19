@@ -2150,9 +2150,9 @@
         <div class="footer">
             <div class="footer-award">🏆 Traveller Review Awards 2026 – 10 out of 10</div>
             <div class="footer-links">
-                <a href="https://www.garden-park.co.uk" target="_blank">garden-park.co.uk</a>
+                <a href="https://www.garden-park.co.uk" target="_blank" rel="noopener">garden-park.co.uk</a>
                 <span>–</span>
-                <a href="https://www.butterfly-cottage.co.uk" target="_blank">butterfly-cottage.co.uk</a>
+                <a href="https://www.butterfly-cottage.co.uk" target="_blank" rel="noopener">butterfly-cottage.co.uk</a>
             </div>
             <div class="footer-credit">Created by Daniel Muccio #ScotlandbyDan</div>
             <div class="footer-disclaimer" data-translate="disclaimer">
@@ -5774,16 +5774,16 @@
             }
             if (dest.website) {
                 if (isPopup) {
-                    parts.push('<a href="https://' + dest.website + '" target="_blank">🌐 ' + dest.website + '</a>');
+                    parts.push('<a href="https://' + dest.website + '" target="_blank" rel="noopener">🌐 ' + dest.website + '</a>');
                 } else {
-                    parts.push('<a href="https://' + dest.website + '" target="_blank" onclick="event.stopPropagation();">🌐 ' + dest.website + '</a>');
+                    parts.push('<a href="https://' + dest.website + '" target="_blank" rel="noopener" onclick="event.stopPropagation();">🌐 ' + dest.website + '</a>');
                 }
             }
             if (dest.blogLink) {
                 if (isPopup) {
-                    parts.push('<a href="' + dest.blogLink + '" target="_blank">📖 ' + t.readBlog + '</a>');
+                    parts.push('<a href="' + dest.blogLink + '" target="_blank" rel="noopener">📖 ' + t.readBlog + '</a>');
                 } else {
-                    parts.push('<a href="' + dest.blogLink + '" target="_blank" onclick="event.stopPropagation();">📖 ' + t.readBlog + '</a>');
+                    parts.push('<a href="' + dest.blogLink + '" target="_blank" rel="noopener" onclick="event.stopPropagation();">📖 ' + t.readBlog + '</a>');
                 }
             }
             return parts.length > 0 ? parts.join('<br>') : '';
