@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Butterfly Cottage</title>
+    <!--
+      The old Joomla site served English from /en/ for years, so links and
+      bookmarks to that path still exist. The English page now lives at the
+      root. This page only forwards; it is kept out of the index and points
+      its canonical at the real page so nothing competes with it.
+
+      If the host allows a proper 301 redirect, use that instead and delete
+      this file.
+    -->
+    <link rel="canonical" href="https://www.butterfly-cottage.co.uk/" />
+    <meta name="robots" content="noindex, follow" />
+    <meta http-equiv="refresh" content="0; url=/" />
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #141816;
+        color: #ece7db;
+        font: 400 1rem/1.6 system-ui, sans-serif;
+        text-align: center;
+        padding: 2rem;
+      }
+      a {
+        color: #8fbcaf;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Butterfly Cottage has moved to
+      <a href="/">www.butterfly-cottage.co.uk</a>.
+    </p>
+    <script>
+      location.replace('/');
+    </script>
+  </body>
+</html>
