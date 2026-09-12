@@ -19,6 +19,7 @@ assets/img/           the camera originals the photos are cut from
 assets/logo.svg       wordmark, used as a CSS mask so it takes the text colour
 assets/favicon.svg    the butterfly on its own
 grantown/             the interactive Highland map and its 24 destination photos
+grantown-map.html     redirect only — do not delete, see "The map" below
 logo/                 brand source files (PDF, traced SVG)
 build_images.py       regenerates everything in assets/photos/
 apply_edits.py        a one-off content edit from an earlier round, kept as a
@@ -64,6 +65,14 @@ separately in the GardenParkMap repository and copied in here; edits belong
 upstream, not in this file. It needs `grantown/media/`, which holds the 24
 destination photos. Leaflet and the fonts come from a CDN, everything else is
 in the file.
+
+There is also a second file, `/grantown-map.html` at the project root — not
+inside the `grantown/` folder. That one is not the map itself, it is a
+one-line redirect to the real map. It exists because a QR code is printed
+and framed on the wall at Garden Park Guest House pointing at that short
+root-level URL, and nobody wants to reprint a physical sign every time the
+site's structure changes. Deleting this file, or forgetting to upload it,
+breaks that QR code with a 404 — which already happened once. Keep it.
 
 ## Schriften (Anleitung auf Deutsch)
 

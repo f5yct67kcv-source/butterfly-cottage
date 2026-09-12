@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Butterfly Cottage — Highland Map</title>
+    <!--
+      DO NOT DELETE. This file is not dead weight and it is not a leftover.
+
+      The interactive Highland map actually lives at /grantown/grantown-map.html,
+      but the printed QR code framed on the wall at Garden Park Guest House
+      points at this short root-level URL instead. Nobody wants to reprint and
+      reframe that sign, so this page exists purely to catch that one URL and
+      forward it to where the real map lives.
+
+      If this file goes missing, the QR code in the guest house stops working
+      with a 404 and nobody notices until a guest complains. It has already
+      happened once, during a manual FTP upload of a project export that
+      didn't include this file. It is checked into the repository now so a
+      future rebuild always carries it along.
+
+      If the host ever offers a proper 301 redirect, use that instead and
+      delete this file — but only after retiring the printed sign too, or
+      updating the URL on the DNS/host side to still catch this path.
+    -->
+    <link rel="canonical" href="https://www.butterfly-cottage.co.uk/grantown/grantown-map.html" />
+    <meta name="robots" content="noindex, follow" />
+    <meta http-equiv="refresh" content="0; url=grantown/grantown-map.html" />
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #141816;
+        color: #ece7db;
+        font: 400 1rem/1.6 system-ui, sans-serif;
+        text-align: center;
+        padding: 2rem;
+      }
+      a {
+        color: #8fbcaf;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Taking you to the
+      <a href="grantown/grantown-map.html">interactive Highland map</a>&hellip;
+    </p>
+    <script>
+      location.replace('grantown/grantown-map.html');
+    </script>
+  </body>
+</html>
