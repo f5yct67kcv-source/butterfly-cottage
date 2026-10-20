@@ -5570,9 +5570,10 @@
         let grantownMarkers = {};
 
         const map = L.map('map', { minZoom: 6 }).setView([GARDEN_PARK.lat, GARDEN_PARK.lng], 8);
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-            subdomains: 'abcd',
+        // CARTO's free raster tiles now demand an API key (watermarked "API KEY
+        // REQUIRED"), so the basemap comes straight from OpenStreetMap instead.
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             maxZoom: 19
         }).addTo(map);
 
