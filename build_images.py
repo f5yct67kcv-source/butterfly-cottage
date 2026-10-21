@@ -72,6 +72,11 @@ HERO_CROPS = {
     "hero-sunset-square": ((800, 500, 3100, 2800), 1200, 800),
 }
 
+# Link preview (og:image) for WhatsApp, iMessage, Facebook and co. They want
+# 1200x630 (1.91:1). Lamp post, sky, gable and sign; stops above the car and
+# left of the road sign.
+SHARE_CROP = ((0, 263, 3500, 2100), 1200, 630)
+
 hero_path = SRC / HERO_SRC
 if hero_path.exists():
     hero = ImageOps.exif_transpose(Image.open(hero_path)).convert("RGB")
@@ -86,6 +91,12 @@ if hero_path.exists():
                 im.save(target, **kwargs)
                 total += target.stat().st_size
         print(f"{name:20s} {cut.size[0]}x{cut.size[1]} -> ok")
+    box, width, height = SHARE_CROP
+    target = OUT / "share.jpg"
+    hero.crop(box).resize((width, height), Image.LANCZOS).save(
+        target, quality=82, optimize=True, progressive=True)
+    total += target.stat().st_size
+    print(f"{'share':20s} -> ok")
 else:
     print("fehlt:", HERO_SRC)
 
